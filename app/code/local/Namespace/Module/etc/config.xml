@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Namespace_Module>
+        <version>0.0.1</version>
+    </Namespace_Module>
+</modules>
+
+<global>
+    <models>
+        <Namespace_Module>
+            <class>Namespace_Module_Model</class>
+        </Namespace_Module>
+    </models>
+    <events>
+        <payment_method_is_active>
+            <observers>
+                <namespace_module>
+                    <type>singleton</type>
+                    <class>Namespace_Module/Observer</class>
+                    <method>paymentMethodIsActive</method>
+                </namespace_module>
+            </observers>
+        </payment_method_is_active>
+    </events>
+</global>
+
+</config>
